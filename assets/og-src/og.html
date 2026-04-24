@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>OG image source · Tianmind Studio</title>
+<!--
+  Rendered via Chrome headless at 1200x630 into assets/og.jpg.
+  Keep fonts self-contained via preconnect; Google Fonts is allowed since this
+  is build-time, not request-time. See .github/workflows/og-image.yml (TBD) or
+  the scripts/generate-og-image.sh script for the exact render command.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;700;800&family=JetBrains+Mono:wght@400;500;700&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 1200px;
+    height: 630px;
+    background: #050B18;
+    color: #E2E8F0;
+    font-family: "Archivo", system-ui, sans-serif;
+    overflow: hidden;
+  }
+  .mono { font-family: "JetBrains Mono", ui-monospace, monospace; }
+  .display { font-family: "Syne", sans-serif; letter-spacing: -0.02em; }
+
+  /* Blueprint grid background, same aesthetic as the landing. */
+  body::before {
+    content: "";
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(circle at 12% 18%, rgba(79,172,254,0.18), transparent 55%),
+      radial-gradient(circle at 88% 70%, rgba(0,242,254,0.10), transparent 55%),
+      linear-gradient(to right, rgba(148,163,184,0.06) 1px, transparent 1px) 0 0 / 48px 48px,
+      linear-gradient(to bottom, rgba(148,163,184,0.06) 1px, transparent 1px) 0 0 / 48px 48px;
+  }
+
+  /* Outer frame like an engineering drawing. */
+  .frame {
+    position: absolute;
+    inset: 28px;
+    border: 1px solid rgba(148,163,184,0.25);
+  }
+  .corner {
+    position: absolute;
+    width: 22px; height: 22px;
+    border-color: #4FACFE;
+    border-style: solid;
+  }
+  .corner-tl { top: -1px; left: -1px; border-width: 2px 0 0 2px; }
+  .corner-tr { top: -1px; right: -1px; border-width: 2px 2px 0 0; }
+  .corner-bl { bottom: -1px; left: -1px; border-width: 0 0 2px 2px; }
+  .corner-br { bottom: -1px; right: -1px; border-width: 0 2px 2px 0; }
+
+  .content {
+    position: absolute;
+    inset: 72px 72px 72px 72px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  /* Top block: drawing stamp + brand. */
+  .top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 32px;
+  }
+
+  .stamp {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    color: #4FACFE;
+    text-transform: uppercase;
+  }
+  .stamp .sep { color: rgba(148,163,184,0.4); margin: 0 8px; }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+  .brand-mark {
+    width: 48px; height: 48px;
+    display: grid;
+    place-items: center;
+    color: #4FACFE;
+  }
+  .brand-title {
+    font-family: "Syne", sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    letter-spacing: -0.01em;
+    color: #E2E8F0;
+  }
+  .brand-title-sub {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    color: rgba(148,163,184,0.7);
+    margin-top: 4px;
+  }
+
+  /* Center block: headline + CLI trio. */
+  .center {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  h1.headline {
+    font-family: "Syne", sans-serif;
+    font-weight: 800;
+    font-size: 74px;
+    line-height: 1.02;
+    letter-spacing: -0.025em;
+    margin: 0;
+    color: #F8FAFC;
+  }
+  h1.headline .accent {
+    color: #4FACFE;
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 700;
+    font-size: 64px;
+    vertical-align: 2px;
+    padding: 0 4px;
+  }
+
+  .lede {
+    font-size: 22px;
+    line-height: 1.35;
+    color: #94A3B8;
+    max-width: 920px;
+  }
+
+  .clis {
+    display: flex;
+    gap: 14px;
+    margin-top: 8px;
+  }
+  .cli {
+    flex: 1;
+    padding: 18px 20px;
+    border: 1px solid rgba(79,172,254,0.25);
+    background: rgba(15,28,51,0.6);
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .cli-code {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: #4FACFE;
+  }
+  .cli-name {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 20px;
+    font-weight: 700;
+    color: #F1F5F9;
+  }
+  .cli-desc {
+    font-size: 13px;
+    color: #94A3B8;
+    line-height: 1.3;
+  }
+
+  /* Bottom block: strip of meta info. */
+  .bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    color: rgba(148,163,184,0.7);
+    border-top: 1px solid rgba(148,163,184,0.15);
+    padding-top: 20px;
+  }
+  .bottom .left { color: #4FACFE; font-weight: 500; }
+  .bottom .pipe { margin: 0 14px; color: rgba(148,163,184,0.3); }
+</style>
+</head>
+<body>
+<div class="frame">
+  <span class="corner corner-tl"></span>
+  <span class="corner corner-tr"></span>
+  <span class="corner corner-bl"></span>
+  <span class="corner corner-br"></span>
+</div>
+
+<div class="content">
+
+  <div class="top">
+    <div class="brand">
+      <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
+        <circle cx="20" cy="20" r="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-dasharray="72 95" stroke-dashoffset="-52" transform="rotate(-90 20 20)"/>
+        <line x1="20" y1="9" x2="20" y2="19" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+      </svg>
+      <div>
+        <div class="brand-title">天智工坊 · Tianmind Studio</div>
+        <div class="brand-title-sub">INDIE · FULL-STACK · AI</div>
+      </div>
+    </div>
+    <div class="stamp">
+      <span>§ OSS/2026</span>
+      <span class="sep">·</span>
+      <span>MIT</span>
+      <span class="sep">·</span>
+      <span>v0.1.x</span>
+    </div>
+  </div>
+
+  <div class="center">
+    <h1 class="headline">
+      Build. Think. <span class="accent">$</span>Transcend.
+    </h1>
+    <div class="lede">
+      三个开源 CLI，把一人工作室里每周都在重做的<br>
+      "新 VPS → 上线 → 运维"工作流，压成三条命令。
+    </div>
+
+    <div class="clis">
+      <div class="cli">
+        <span class="cli-code">WRK-001</span>
+        <span class="cli-name">site-bootstrap</span>
+        <span class="cli-desc">One-command deploy: Cloudflare DNS + nginx + Let's Encrypt + rollback.</span>
+      </div>
+      <div class="cli">
+        <span class="cli-code">WRK-002</span>
+        <span class="cli-name">vps-init</span>
+        <span class="cli-desc">VPS bootstrap tuned for CN / HK servers. Idempotent, --dry-run, anti-lockout SSH.</span>
+      </div>
+      <div class="cli">
+        <span class="cli-code">WRK-003</span>
+        <span class="cli-name">cloudflare-cn-kit</span>
+        <span class="cli-desc">Cloudflare CLI. Catches the Flexible-SSL loop and other CN-region traps.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom">
+    <div>
+      <span class="left">tianmind.com</span>
+      <span class="pipe">·</span>
+      <span>github.com/tianmind-studio</span>
+    </div>
+    <div>
+      Build. Think. Transcend.
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
