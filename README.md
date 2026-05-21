@@ -1,128 +1,127 @@
-<h1 align="center">tianmind-landing</h1>
-<p align="center">
-  <b>独立开发者 / 代码工作室品牌着陆页模板</b><br>
-  <sub>Indie dev / software studio landing page template — zero build, zero deps</sub>
-</p>
+# tianmind-landing
 
-<p align="center">
-  <a href="https://491034170.github.io/tianmind-landing"><img src="https://img.shields.io/badge/Live_Demo-View-4facfe?style=flat-square"/></a>
-  <a href="./LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square"/></a>
-  <img src="https://img.shields.io/badge/Dependencies-Zero-2EA043?style=flat-square"/>
-  <img src="https://img.shields.io/badge/Deploy-GitHub_Pages_|_Cloudflare-F38020?style=flat-square"/>
-</p>
+Public-safe bilingual landing page template for independent developers, small studios, and AI-assisted service builders.
 
----
+独立开发者 / 小型工作室 / AI-assisted service builder 的中英双语品牌着陆页模板：零构建、零依赖、可 fork、可部署、可改成自己的公开服务页。
 
-## ✨ 特点 / Features
+## What It Is
 
-- 🎨 **Blueprint / 工程图纸美学** — 深蓝渐变 + 发光蓝 + 精细网格 + 工业编号
-- 🌏 **中英双语** — 一键切换,localStorage 记忆偏好
-- ⚡ **零构建 / 零依赖** — 纯 HTML + CSS + JS,直接部署
-- 📱 **完全响应式** — 手机到 4K 显示器都能看
-- 💫 **流畅微交互** — 滚动淡入、数字计数、Hero 电源图标呼吸发光、hover 刻线延伸
-- 🔤 **独特字体组合** — Syne + JetBrains Mono + Archivo (非 Inter / 非 Space Grotesk)
-- ♿ **尊重 `prefers-reduced-motion`** — 关闭动画时自动降级
-- 🚀 **一键 Fork 可用** — 改内容就是你的品牌页
+This repo is a static landing page template. It helps an outside reader understand:
 
----
+- Who you are.
+- What you build.
+- Which proof links, demos, or public projects they can inspect.
+- How to start with a safe first brief.
+- What private material should not be shared publicly.
 
-## 🧩 页面结构 / Sections
+It is designed for public trust, not for exposing private commercial workflows.
 
-1. **Hero** — 品牌标语 + 核心指标 + 电源图标动画
-2. **Manifesto** — 3 条工作底线
-3. **Services** — 6 类服务(工程图纸卡片)
-4. **Tech Stack** — 4 栏技术栈
-5. **Featured Work** — 代表作品链接
-6. **Pricing** — 报价表 + 6 步合作流程
-7. **FAQ** — 6 个预防问题
-8. **Contact** — 淘宝 / 邮件 / 官网 / GitHub 四卡片
+## Features
 
----
+- Blueprint-inspired visual style with dark hero, bright accent lines, and structured service cards.
+- Chinese and English copy with a lightweight language switch.
+- Pure HTML, CSS, and JavaScript.
+- Responsive layout from mobile to desktop.
+- Public proof sections for projects, demos, templates, and verification links.
+- FAQ and contact sections that can stay public-safe.
+- No build step and no runtime dependency.
 
-## 🚀 快速开始 / Quick start
+## Page Sections
 
-### 方式一:Fork 后改
+1. Hero: positioning, audience, and primary action.
+2. Manifesto: operating principles and public promise.
+3. Services: service categories or capability cards.
+4. Tech Stack: tools and delivery stack.
+5. Featured Work: public projects, demos, and proof links.
+6. Trust Path: safe first brief, review flow, and public boundary.
+7. FAQ: common buyer or collaborator questions.
+8. Contact: public contact paths only.
+
+## Quick Start
 
 ```bash
-# 1. Fork 到自己的账号
-# 2. Clone 下来
-git clone https://github.com/YOUR_USERNAME/tianmind-landing.git
+git clone https://github.com/tianmind-studio/tianmind-landing.git
 cd tianmind-landing
-
-# 3. 改文案(index.html) + 改颜色(styles.css 顶部 :root 变量)
-# 4. 推回 GitHub,启用 Pages 即可
 ```
 
-### 方式二:直接部署到 Cloudflare Pages
+Edit:
 
-1. Fork 本仓库
-2. [Cloudflare Pages](https://pages.cloudflare.com) → 连接 Git → 选 fork 后的仓库
-3. Build command 留空,Output directory 设为 `/`
-4. Deploy
+- `index.html` for structure and default Chinese copy.
+- `assets/styles.css` for colors, spacing, and visual system.
+- `assets/app.js` for language switch and English copy.
 
----
+Then publish with GitHub Pages, Cloudflare Pages, or any static host.
 
-## 🎨 自定义 / Customization
+## Customization
 
-### 换品牌色(styles.css 顶部)
+### Brand Color
+
+Edit CSS variables near the top of `assets/styles.css`.
 
 ```css
 :root {
-  --accent: #4FACFE;         /* 主色 */
-  --accent-bright: #00F2FE;  /* 渐变终点 */
-  --accent-warm: #FFD89B;    /* 点缀色(淘宝卡片) */
-  --bg: #050B18;             /* 深背景 */
+  --accent: #4facfe;
+  --accent-bright: #00f2fe;
+  --accent-warm: #ffd89b;
+  --bg: #050b18;
 }
 ```
 
-### 换字体(index.html `<link>` 标签)
+### Copy
 
-Google Fonts 替换 `Syne`、`Archivo`、`JetBrains Mono` 为你的选择,同步改 `--font-display` 等变量。
+- Keep the first screen concrete: who it is for, what you build, and what proof exists.
+- Link to public demos, case studies, repositories, screenshots, or verification commands.
+- Keep private examples out of public screenshots and public copy.
+- Keep Chinese and English content aligned when editing.
 
-### 改文案
+### Proof Links
 
-- **中文文案**:直接改 `index.html` 中 `data-i18n` 元素的内容
-- **英文文案**:改 `assets/app.js` 里 `i18n.en` 对象
-- **中英文本对照位置**一致,方便同步维护
+Useful public links for TianMind Studio-style pages:
 
----
+- Public studio: <https://junius.tianmind.com/studio.html>
+- Service one-pagers: <https://junius.tianmind.com/service-one-pagers.html>
+- Demo proof kit: <https://junius.tianmind.com/demo-proof.html>
+- Repo proof pack: <https://junius.tianmind.com/repo-proof.html>
+- GitHub trust queue: <https://junius.tianmind.com/github-trust-queue.html>
+- Trust center: <https://junius.tianmind.com/trust.html>
 
-## 📂 文件说明
+## File Structure
 
-```
+```text
 tianmind-landing/
-├── index.html           # 结构 + 中文默认文案
+├── index.html
 ├── assets/
-│   ├── styles.css       # 全部样式(单文件)
-│   └── app.js           # 语言切换 + 动画 + 滚动触发
+│   ├── styles.css
+│   └── app.js
 ├── README.md
 └── LICENSE
 ```
 
----
+## Public-Safe Boundary
 
-## 🎯 谁适合用
+Do not publish:
 
-- 想自建品牌页的独立开发者 / Freelancer
-- 小团队 / 工作室对外宣传
-- Claude Code / AI 开发者想做作品集
-- 任何需要"快速有一个像样官网"的场景
+- No customer files.
+- No raw private conversations.
+- No credentials, tokens, cookies, SSH keys, or account access.
+- No contracts.
+- No sensitive commercial records.
+- No private backend access.
+- No database dumps.
+- No full private vault content.
+- No Hermes or safe-index configuration.
+- No unconfirmed claims.
 
----
+Use public links, redacted samples, sanitized screenshots, sample outputs, and verification commands instead.
 
-## 📬 支持 / Contact
+## Contact
 
-模板由 **[天智工坊 · Tianmind Studio](https://tianmind.com)** 设计开发。
-Designed & built by [Tianmind Studio](https://tianmind.com).
+Designed and maintained by TianMind Studio / 天智工坊.
 
-- 🌐 官网:[tianmind.com](https://tianmind.com)
-- 📧 邮箱:wx@tianmind.com
-- 🛒 淘宝店铺:搜索「**天智工坊**」— 定制版本可联系报价
-
----
+- Studio surface: <https://junius.tianmind.com/studio.html>
+- GitHub profile: <https://github.com/tianmind-studio>
+- Public contact: `wx@tianmind.com`
 
 ## License
 
-MIT © 2026 天智工坊 · Tianmind Studio
-
-<sub>If you use this template, a ⭐ Star means a lot. Happy shipping.</sub>
+MIT © TianMind Studio / 天智工坊
